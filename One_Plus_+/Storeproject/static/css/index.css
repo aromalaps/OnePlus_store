@@ -12,7 +12,7 @@ body {
 /* First frond end banner image */
 .banner1 {
     position: relative;
-    background-image: url("../home_images/oneplus12r.jpg");
+
     width: 100vw;
     height: 66vh !important;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body {
 
 .banner-1_text {
     position: absolute;
-    top: 9%;
+    top: 10%;
     left: 2.4%;
     color: rgba(0, 0, 0, .9);
     font-size: 15px;
@@ -44,7 +44,7 @@ body {
 
 .banner-1_text2 {
     position: absolute;
-    top: 17.5%;
+    top: 13.5%;
     left: 2.4%;
     font-size: 36px;
     font-weight: 400;
@@ -68,19 +68,62 @@ body {
     left: 2.8%;
     font-size: 11px !important;
     font-weight: 600 !important;
-    background-color: black !important;
-    color: white !important;
+    background-color: rgb(34, 33, 33) !important;
+    color: rgb(255, 255, 255) !important;
     border-radius: 2px !important;
+    z-index: 65;
 }
 
 .banner1_learnmore {
     position: absolute;
+    z-index: 0;
     top: 87%;
-    left: 15%;
+    left: 17%;
     font-size: 11px !important;
     font-weight: 600 !important;
-    color: black !important;
+    color: rgb(255, 255, 255) !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -88,7 +131,7 @@ body {
 
 .banner2 {
     position: relative;
-    background-image: url("../home_images/oneplus12-img-2.jpg");
+
     width: 100vw;
     height: 66vh !important;
     background-repeat: no-repeat;

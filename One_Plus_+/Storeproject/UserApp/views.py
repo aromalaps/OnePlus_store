@@ -50,3 +50,10 @@ def logout(req):
     auth.logout(req)
     req.session.pop('user',None)
     return redirect('mainapp:Home')
+
+def UserProfile(req,id):
+    user=req.session['user']
+    profile=User.objects.get(id=id)
+    print(user)
+    print(profile.username)
+    return render(req,'profile.html',{'profile':profile})

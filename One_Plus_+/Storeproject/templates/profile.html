@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+<div class="container w-50 py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <img src="../static/home_images/easy-upgrade-mob.jpg" alt="Profile Picture" class="profile-pic mb-4"
+                        width="200px">
+
+                    <p class="h">Name:<b class="h4">{{profile.first_name}}{{profile.last_name}}</b></p>
+
+                    <p class="text-muted">Email:{{profile.email}}</p>
+                    <p class="text-muted">Username:{{profile.username}}</p>
+                    <!-- Add more profile information as needed -->
+                    {% comment %} <a href="edit-profile.html" class="btn btn-primary">Edit Profile</a> {% endcomment %}
+                    <a href="{% url 'User:Logout' %}" class="btn btn-outline-dark">Logout</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

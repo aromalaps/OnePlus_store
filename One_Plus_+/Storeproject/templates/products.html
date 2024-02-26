@@ -5,11 +5,10 @@
 <div class="main">
 
     <div class="container-fluid p-0">
-        <div class="row mx-2  pt-5 ">
-            {% for i in phone %}
+        <div class="row  pt-5 ">
+            {% for i in product %}
             <div class="col-xl-3 col-auto  card_col   mb-2">
                 <a href="{% url 'Products:detail' i.id %}" class="text-decoration-none text-dark">
-
                     <div class="card card_product h-100 border-0 rounded-0  ">
                         <img class="image_product " src="{{i.image.url}}" width="310px" alt="">
                         <div class="card-body px-1">
@@ -30,6 +29,7 @@
             {% endfor %}
         </div>
     </div>
+</div>
     {% comment %} {% include './nav_footer/footer.html' %} {% endcomment %}
     {% endblock %}
   

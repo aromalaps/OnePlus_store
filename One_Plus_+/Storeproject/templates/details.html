@@ -21,7 +21,8 @@
             <hr>
             <p class="card-text"><strong>Color:</strong> {{details.color}}</p>
             <p class="card-text mb-0 pb-3 " style="font-weight: 500;">ROM</p>
-            <p class="mt-0 pt-0"><a class="btn btn-outline-dark rounded-0 me-1" href="#" role="button">{{details.storage}}</a>
+            <p class="mt-0 pt-0"><a class="btn btn-outline-dark rounded-0 me-1" href="#"
+                    role="button">{{details.storage}}</a>
                 <a class="btn btn-outline-dark rounded-0" href="">16
                     GB RAM + 512 GB Storage</a>
             </p>
@@ -29,25 +30,35 @@
     </div>
 </div>
 <div class="navbar fixed-bottom bg-light">
+    {% if user.is_authenticated %}
     {% if details.stock != 0 %}
-    <div class="container-fluid d-flex justify-content-end align-item-center">        
-        <a href="{% url 'Cart:addcart' details.id %}" type="button" class="btn  btn_addtocart rounded-0 text-light me-3">Add to cart </a>
+    <div class="container-fluid d-flex justify-content-end align-item-center">
+        <a href="{% url 'Cart:addcart' details.id %}" type="button"
+            class="btn  btn_addtocart rounded-0 text-light me-3">Add to cart </a>
         <a type="button" class="btn btn_buynow btn-secondary rounded-0  me-2">Buy now</a>
     </div>
     {% else %}
     <div class="container-fluid d-flex justify-content-center align-item-center">
         <p>
-            <h2 class="stockout text-danger pb-3">Out of Stock</h2>
+        <h2 class="stockout text-danger pb-3">Out of Stock</h2>
         </p>
     </div>
+
+    </p>
+</div>
+{% endif %}
+{% else %}
+<div class="container-fluid d-flex justify-content-center align-item-center">
+    <p>
+    <h2 class="stockout text-danger pb-3">PleaseLogin</h2>
     {% endif %}
-    
+
 
 </div>
 {% endblock %}
 
 
-{% comment %} 
+{% comment %}
 {% if details.stock != 0 %}
 <p>
     <a href="{% url 'cart_page:addcart' details.id %}" type="button" class="btn btn-warning">
